@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EventSource Demo</title>
+    <script type="text/javascript">
+        function logText(msg) {
+            var data = document.getElementById('data');
+            data.innerHTML= msg;
+        }
+
+        var es = new EventSource('memoryUsage');
+        es.onopen = function() {
+            logText('OPEN');
+        };
+        es.onmessage = function(event) {
+            logText(event.data);
+        };
+        es.onerror = function() {
+            logText('ERROR');
+        };
+    </script>
+</head>
+<body>
+<div id="data"></div>
+</body>
+</html>

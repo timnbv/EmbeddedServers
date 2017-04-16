@@ -7,7 +7,12 @@
         <groupId>com.epam.jmp</groupId>
         <artifactId>parent-module</artifactId>
         <version>${version}</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
+
+    <properties>
+        <deploy.dir>../../deploy</deploy.dir>
+    </properties>
 
     <artifactId>OsgiConsumer</artifactId>
     <packaging>bundle</packaging>

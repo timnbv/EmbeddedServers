@@ -19,9 +19,10 @@
     <name>Parent Project</name>
 
     <modules>
-        <module>HelloWorldOSGi</module>
-        <module>OsgiConsumer</module>
+        <module>OsgiPoc/HelloWorldOSGi</module>
+        <module>OsgiPoc/OSGiConsumer</module>
         <module>ServerTimeJetty</module>
+        <module>WebbitSocket</module>
     </modules>
 
     <dependencies>

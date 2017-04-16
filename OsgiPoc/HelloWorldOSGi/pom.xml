@@ -7,11 +7,15 @@
         <groupId>com.epam.jmp</groupId>
         <artifactId>parent-module</artifactId>
         <version>${version}</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>HelloWorldOSGi</artifactId>
     <packaging>bundle</packaging>
 
+    <properties>
+        <deploy.dir>../../deploy</deploy.dir>
+    </properties>
     <build>
         <plugins>
             <plugin>

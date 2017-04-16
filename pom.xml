@@ -19,8 +19,9 @@
     <name>Parent Project</name>
 
     <modules>
-        <module>HelloWorldService</module>
+        <module>HelloWorldOSGi</module>
         <module>OsgiConsumer</module>
+        <module>ServerTimeJetty</module>
     </modules>
 
     <dependencies>
@@ -28,6 +29,7 @@
             <groupId>org.apache.felix</groupId>
             <artifactId>org.osgi.core</artifactId>
             <version>1.4.0</version>
+            <!--<scope>provided</scope>-->
         </dependency>
     </dependencies>
 

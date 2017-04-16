@@ -13,6 +13,7 @@ public class HelloWorldConsumer implements ActionListener{
 
     private final HelloWorldService service;
     private final Timer timer;
+    private int counter;
 
     public HelloWorldConsumer(HelloWorldService service) {
         super();
@@ -32,6 +33,11 @@ public class HelloWorldConsumer implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (counter > 5) {
+            timer.stop();
+            System.out.println("I'm stopping");
+        }
         service.hello();
+        counter++;
     }
 }

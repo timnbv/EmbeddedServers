@@ -21,9 +21,7 @@ public class JettyServer extends Server {
 
         context.addServlet(new ServletHolder(new ServerTimeServlet()), "/" + SERVERTIME_ENDPOINT);
         start();
-
         System.out.println("Server on port " + getURI() + SERVERTIME_ENDPOINT);
-        join();
     }
 
 

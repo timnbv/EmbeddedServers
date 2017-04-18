@@ -43,15 +43,15 @@
                         <Embed-Transitive>true</Embed-Transitive>
                         <Embed-Directory>OSGI-INF/lib</Embed-Directory>
                         <Import-Package>
-                            !org.eclipse.jetty.jmx
-                            <!--,!org.osgi.framework-->
+                            <!--!org.eclipse.jetty.jmx-->
+                            org.osgi.framework
                         </Import-Package>
                     </instructions>
                 </configuration>
             </plugin>
-            <!--<plugin>-->
-                <!--<artifactId>maven-antrun-plugin</artifactId>-->
-            <!--</plugin>-->
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+            </plugin>
         </plugins>
     </build>
 

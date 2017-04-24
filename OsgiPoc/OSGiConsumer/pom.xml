@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.epam.jmp</groupId>
         <artifactId>parent-module</artifactId>
-        <version>${version}</version>
+        <version>1.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 

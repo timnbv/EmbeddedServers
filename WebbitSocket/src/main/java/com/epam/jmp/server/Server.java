@@ -2,7 +2,7 @@ package com.epam.jmp.server;
 
 import org.webbitserver.WebServer;
 import org.webbitserver.WebServers;
-import org.webbitserver.handler.StaticFileHandler;
+import org.webbitserver.handler.EmbeddedResourceHandler;
 
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
@@ -18,7 +18,7 @@ public class Server {
     public Server() throws IOException, ExecutionException, InterruptedException {
         final InfoProvider broadcaster = new InfoProvider();
         WebServer webServer = WebServers.createWebServer(8888)
-                .add(new StaticFileHandler("webbitsocket/src/main/resources/web"))
+                .add(new EmbeddedResourceHandler("web"))
                 .add("/memoryUsage", new EventHandler(broadcaster))
                 .add("/hello", new HelloWorldHandler());
         webServer.start().get();
